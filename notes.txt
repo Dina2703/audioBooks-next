@@ -38,3 +38,6 @@ When we have a test.js file inside a subfolder Next will create a route for the 
 in NEXT you can have reusable(or dropping) components like Nabvar component,  Contact-bar component.We DON"T CREATE them inside 'pages' folder,  for those kinda components we need a new folder inside your project root. 
 Then you can drop this reusable component inside your page component.
 
+-----------Layout file-------------
+The Layout Component contains the Nabvar and the Footer. and will wrap all of our different pages,  inside app.js
+{children} that we passing as props is anything nested inside this Layout component in the app.js(which are React pages). Now its pairing top(Navbar) and bottom(Footer) of all single page component.
