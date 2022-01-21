@@ -41,3 +41,25 @@ Then you can drop this reusable component inside your page component.
 -----------Layout file-------------
 The Layout Component contains the Nabvar and the Footer. and will wrap all of our different pages,  inside app.js
 {children} that we passing as props is anything nested inside this Layout component in the app.js(which are React pages). Now its pairing top(Navbar) and bottom(Footer) of all single page component.
+
+
+__________________ Adding Styles in NEXT____________________
+* can use global stylesheets for global common styles across the whole website.
+* can use Styles JSX - which lets you write css in a React Component.
+* use CSS Modules - which NEXT has built-in support for whereby each component can have its own unique scoped style sheet.
+
+In this project we will use mix of global stylesheet and css modules. Global css file is already created for us inside the 'styles' folder, 'globals.css'. 
+'globals.css' - so anything inside this file will apply to anything on the whole website. This file imported to the app.js file, where all of our pages rendered.
+
+CSS MODULES allows us to write a stylesheet for each pahe component and then we import that stylesheet into whatever component needs it and NEXT is automatically going to scope those styles to that component by adding random characters next to the classNames and Selectors, that means that those styles will only apply to that component, and we don't have to worried about className conflict between different components and their stylesheets.
+example: Home.module.css stylesheet inside the styles folder imported and  applied only to the index.js page, which is home page for our website.
+These files for css modules take name moduleName.module.css 
+IMPORTANT: use CLASS Selectors, NOT element selectors.
+HOW TO USE Module CSS style  ----->
+1. add some style in module.css file.(ex. 
+.container {
+background: red;
+})
+2. import to the page file, where you need will use
+3. add className into element you need to apply it, like <div className={styles.container}>.  here we're appling container class to this div, via props 'styles'
+Now if you check Elements tab you will see a new className on this div -> 'Home_container__bCOhY' last random characters where applyed by NEXT, if you use this {styles.container} inside another class, that element will have different className.
