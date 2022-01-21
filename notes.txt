@@ -26,3 +26,12 @@ ________________Folders______________
  _________npm run dev  - command  runs 'next dev' which runs a local development server for us in localhost:3000, so we can preview our app in a browser.
  eveything you seen in the browser is created in the index.js component.
  REMEMBER: this component (index.js) was pre-pendered before reaches the browser. So server renderes the component then sends the HTML file to the browser. And that happents for each page request from the browser. If we type a different url it will look for the component for that url pre-redner it and send it to the browser.
+
+ ---------Pages and Routes----------
+ Each page component was it own file inside the 'pages' folder. The file name and location of each page component is tied to the route for that articular page.
+ example: 'about.js' file inside pages folder, then NEXT will automatically create a route '/about', which is the name of the file, to serve up this components.
+ So we create React component for this page inside this file. So route name tied to the file name.
+Only one exception for the index.js, that NEXT does't create a route '\index', it just creates the route '\'.
+
+When we have a test.js file inside a subfolder Next will create a route for the file based on that subfolder. '\subfolder\test\',a route for  index.js which is inside a subfolder 'blogs', will have the '\blogs' route. Since index.js is exceptional.
+
