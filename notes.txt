@@ -1,0 +1,28 @@
+
+
+------------------What is Next.js-----------------
+- Framework for creating pre-rendered React websites.
+- offers us both Server Side Rendering & Static Site Generation (SSR) & (SSG)
+
+* Server-Side rendering  - when React components are rendered into HTML pages on the server after a page request comes from the browser.
+* Static Site Generation - when React components are rendered into HTML pages at built time, so that we can just deploy the web pages and JS bundles to the web. And NEXT.JS allows us easily do both of these things, meaning that our React components are already rendered into HTML pages by the time they reach the browser, now from that poit onward the application can behave more like an SPA (single page application), and all routing can be handled on the client side in the browser.
+_______________SSG & SSR Benefits-------------------
+ * Pre-rendering improves performance
+ * Better Search Engine Optimization (SEO)
+
+ _______________Start______________
+ npx create-next-app projectName
+________________Folders______________
+
+ * node_modules - where our all the dependencies are stored.
+ * pages - where our different page components are going to be created. in Next.js every page has its own react components.
+ * index.js - index component for the home page.
+ * _app.js - kinda like a root component, and all of our diffent page components are rendered right here.
+ * api - folder  for api endpoints  
+ * public folder - for public assets like images
+ * styles - folder for different css filed and css modules 
+ * .gitignore - for version control
+ * package.json - files to keep track of our different dependencies 
+ _________npm run dev  - command  runs 'next dev' which runs a local development server for us in localhost:3000, so we can preview our app in a browser.
+ eveything you seen in the browser is created in the index.js component.
+ REMEMBER: this component (index.js) was pre-pendered before reaches the browser. So server renderes the component then sends the HTML file to the browser. And that happents for each page request from the browser. If we type a different url it will look for the component for that url pre-redner it and send it to the browser.
