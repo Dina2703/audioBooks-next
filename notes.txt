@@ -31,9 +31,10 @@ ________________Folders______________
  Each page component was it own file inside the 'pages' folder. The file name and location of each page component is tied to the route for that articular page.
  example: 'about.js' file inside pages folder, then NEXT will automatically create a route '/about', which is the name of the file, to serve up this components.
  So we create React component for this page inside this file. So route name tied to the file name.
-Only one exception for the index.js, that NEXT does't create a route '\index', it just creates the route '\'.
+Only one exception for the index.js, that NEXT does't create a route '\index', it just creates the route '/'.
 
-When we have a test.js file inside a subfolder Next will create a route for the file based on that subfolder. '\subfolder\test\',a route for  index.js which is inside a subfolder 'blogs', will have the '\blogs' route. Since index.js is exceptional.
+When we have a test.js file inside a subfolder Next will create a route for the file based on that subfolder. '/subfolder/test/',a route for  index.js which is inside a subfolder 'blogs', will have the '\blogs' route. Since index.js is exceptional.
 
 in NEXT you can have reusable(or dropping) components like Nabvar component,  Contact-bar component.We DON"T CREATE them inside 'pages' folder,  for those kinda components we need a new folder inside your project root. 
 Then you can drop this reusable component inside your page component.
+
