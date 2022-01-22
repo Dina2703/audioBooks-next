@@ -5,6 +5,11 @@ import Link from "next/link";
 
 export default function Home() {
   return (
+    <>
+  <Head>
+  <title>Books shop | Home</title>
+  <meta name="keywords" content="books"/>
+  </Head>
     <div>
       <h1 className={styles.title}>Home page</h1>
       <p className={styles.text}>
@@ -23,5 +28,6 @@ export default function Home() {
         <a className={styles.btn}>See Books Listing</a>
       </Link>
     </div>
+    </>
   );
 }

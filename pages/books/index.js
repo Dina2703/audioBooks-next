@@ -1,9 +1,16 @@
 import styles from "../../styles/Books.module.css";
+import Head from "next/head";
 const Test = () => {
   return (
-    <div>
-      <h1 className={styles.txt}>Books page</h1>
-    </div>
+    <>
+      <Head>
+        <title>Books shop | Book Listing</title>
+        <meta name="keywords" content="books" />
+      </Head>{" "}
+      <div>
+        <h1 className={styles.txt}>Books page</h1>
+      </div>
+    </>
   );
 };
 

@@ -83,3 +83,17 @@ this retuns to us a router object which contains a method that we can use to red
 some methods on this (router) object:
 router.go()  - this method allows us to go back and forth through the history, example: router.go(-1) takes back through history one step. router.go(1) takes forward  1 step
 router.push()  - this method redirects to the route, which was passed, example: router.push('/') redirects to the Home page.
+
+
+----------Metadata------------------
+Metadat for adding custom title in the head for each page. The title in the head is the thing that shows in the top of tab. We can add custom title to every page, for that we need to import Head component like: import Head from "next/head"; then use it inside the return();
+To do so, we need to use Head component, which provides by NEXT to index.js
+<>
+<Head>
+  <title>Books shop | Home</title>
+  <meta name='keywords' content='books'>
+</Head>
+<div>some content</div>
+</Head>
+</>
+We also can add metadat inside this Head component, which we can see via inspect in the 'Elements' tab.
