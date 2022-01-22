@@ -64,3 +64,22 @@ background: red;
 2. import to the page file, where you need will use
 3. add className into element you need to apply it, like <div className={styles.container}>.  here we're appling container class to this div, via props 'styles'
 Now if you check Elements tab you will see a new className on this div -> 'Home_container__bCOhY' last random characters where applyed by NEXT, if you use this {styles.container} inside another class, that element will have different className.
+
+
+---------------useEffect hook--------------------
+   *  useEffect is a React Hook, which fires a function when the components first mounts, means the user first sees the page in the browser.
+
+  Into useEffect we pass two arguments, first the function that fires when the component first mountes, as a second argument we pass here an empty array in this example, which is the dependency array, when it's empty it means only fire this function once when the component mountes, and not again if any state changes.
+   useEffect(() => {
+     code to run when a component first mountes
+   }, [])
+
+   __________________Redirect in NEXT____________________
+
+1. import { useRouter } from "next/router"; 
+2. initialize useRouter hook and store its result inside a variable.
+const router = useRouter();
+this retuns to us a router object which contains a method that we can use to redirect the user. 
+some methods on this (router) object:
+router.go()  - this method allows us to go back and forth through the history, example: router.go(-1) takes back through history one step. router.go(1) takes forward  1 step
+router.push()  - this method redirects to the route, which was passed, example: router.push('/') redirects to the Home page.
