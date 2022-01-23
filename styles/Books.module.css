@@ -4,9 +4,16 @@
   display: block;
   margin: 20px 10px;
   border-left: 8px solid #fff;
-
+  color: rgb(93, 86, 86);
 }
 
 .single:hover {
-  border-left: 8px solid rgb(21, 49, 105);;
+  border-left: 8px solid rgb(21, 49, 105);
 }
+
+.title {
+  color: rgb(68, 143, 143);
+  padding-bottom: 20px;
+  text-align: center;
+}
+

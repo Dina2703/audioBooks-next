@@ -16,7 +16,7 @@ const Books = ({ authors }) => {
         <meta name="keywords" content="books" />
       </Head>
       <div>
-        <h1 className={styles.txt}>Book Authors</h1>
+        <h1 className={styles.title}>Book Authors</h1>
         {authors.map((author) => (
           <div key={author.id}>
             <a className={styles.single}>
