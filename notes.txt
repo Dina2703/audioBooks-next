@@ -163,4 +163,4 @@ export const getStaticProps = async (context) => {
 THE JOB OF NEXT is to build static pages and js bundles based on our components. And the reason to do getStaticPaths() is to tell NEXT how many html pages need to be made based on our data, based on paths data. And for each of those NEXT will run getStaticProps()  function and fetch each item that we need and then we put that into the component, so NEXT can generate a template for each of these pages.
 
 ------- npm run build--------
-if you run 'npm run build', 
+if you run 'npm run build', will see .next folder , where you can find all html pages and more created by NEXT. and inside pages/books folder you see 10 html pages for our 10 item details pages for us.
