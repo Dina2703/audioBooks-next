@@ -119,3 +119,7 @@ export const getStaticProps = async () => {
 };
 NOW the data is available to us inside our component as props. we can destructure it from the props like so --->  const Books = ({ authors }) => {}
 REMEMBER: getStaso it can be rendered with that data inside it.
+
+________________Dynamic Routes [id].js______________
+we need to make a route 'books/id', so for that we create a detailed page, which renders more details about the book/or item from the list, inside the books folder, so NEXT can creates appropiate route to the details page.
+in NEXT a changeable route we represent with square brackets, so name of the file will be [id].js, id parameter will change depending which item clicked on.
