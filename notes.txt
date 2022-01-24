@@ -121,5 +121,46 @@ NOW the data is available to us inside our component as props. we can destructur
 REMEMBER: getStaso it can be rendered with that data inside it.
 
 ________________Dynamic Routes [id].js______________
-we need to make a route 'books/id', so for that we create a detailed page, which renders more details about the book/or item from the list, inside the books folder, so NEXT can creates appropiate route to the details page.
-in NEXT a changeable route we represent with square brackets, so name of the file will be [id].js, id parameter will change depending which item clicked on.
+we need to make a route 'books/id', so for that we create a detailed page, which renders more details about the book/or item from the list, inside the books folder, so NEXT will be able generate a route and html for each of these items on the list .
+in NEXT a changeable route parameter we represent with square brackets, so name of the file will be [id].js, 'id' route parameter will change depending which item clicked on.
+
+------------------getStaticPaths-------------------
+We need a way to explicity tell NEXT what book details routes and pages we need to create at build time based on our data, to do thie we use getStaticPaths() function, the function runs at build time and inside we return all the possible values for our route parameter, which is 'id' in our case. And NEXT generates a route and HTML page for each of those ids. 
+Create getStaticPaths() at the top of [id].js file.
+
+export const getStaticPaths = async () => {
+  const res = await fetch("https://jsonplaceholder.typicode.com/users");
+  const data = await res.json();
+
+  CONST paths = data.map(author => {
+    return {
+      params: {id: author.id.toString()}  //author.id retuns an integer, but we need a string version of it, so we added to it toString() method.
+    }
+  })
+
+  return {
+    paths, 
+    fallback: false,
+  };
+};
+
+We return an object, which has path property, that paths needs an array of objects, where each object represents a route, and in each of those objects we need to specify any route parameters, in our case 'id'.
+We also need the second property called 'fallback', it for fallback page, but we don't do that here so, we can just pass false value to it. So when user tries to open page that does't exist here it shoes 404 page.
+
+Now we tell NEXT what pages to build based on this paths things (returned value from getStaticPaths()), and we also need a way for each of those pages to show the data that we need for it. To do that we need to fetch each individual author or item separately and pass that into the component as a props. we need to create getStaticProps(), as we did in index.js
+Inside the getStaticProps() we need to get data for each indiviual author(or item) and return it, so we can pumped into the compoonent itself.
+NEXT based on paths, so of return ten different ids in this path property, NEXT will run getStaticProps() function essentially 10 times, so we can make 10 different fetch requests for diffent items. We get access to the parameter we need each time around on a context object that we atomatically accept as an argument in this function so the id of each item we need to get is going to be attached to this context object.
+export const getStaticProps = async (context) => {
+  const id = context.params.id;
+  const res = await fetch("https://jsonplaceholder.typicode.com/users/" + id); // this will get one single item for us each time around.
+  const data = await res.json();
+
+  return {
+    props: { author: data },
+  };
+};
+
+THE JOB OF NEXT is to build static pages and js bundles based on our components. And the reason to do getStaticPaths() is to tell NEXT how many html pages need to be made based on our data, based on paths data. And for each of those NEXT will run getStaticProps()  function and fetch each item that we need and then we put that into the component, so NEXT can generate a template for each of these pages.
+
+------- npm run build--------
+if you run 'npm run build', 
