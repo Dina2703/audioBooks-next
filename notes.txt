@@ -1,5 +1,5 @@
 
-
+npm run dev      //to run 
 ------------------What is Next.js-----------------
 - Framework for creating pre-rendered React websites.
 - offers us both Server Side Rendering & Static Site Generation (SSR) & (SSG)
