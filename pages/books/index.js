@@ -13,7 +13,7 @@ import Head from "next/head";
 const Books = () => {
   const authors = [
     {
-      name: "GOOD VIBES GOOD LIFE",
+      name: "GOOD VIBES, GOOD LIFE",
       author: "Vex King",
       url: "https://www.youtube.com/watch?v=Bgaok7GF3_g",
       id: 1,
