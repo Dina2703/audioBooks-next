@@ -9,6 +9,10 @@ a {
   color: #333;
   text-decoration: none;
 }
+
+.active {
+  border-bottom: 3px solid white;
+}
 .content {
   max-width: 960px;
   margin: 0 auto;
@@ -37,7 +41,6 @@ nav .logo {
   margin-right: auto;
   cursor: pointer;
 }
-
 
 footer {
   display: block;

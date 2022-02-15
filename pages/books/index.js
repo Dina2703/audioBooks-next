@@ -17,7 +17,7 @@ const Books = ({ authors }) => {
         <meta name="keywords" content="books" />
       </Head>
       <div>
-        <h1 className={styles.title}>Book Authors</h1>
+        <h1 className={styles.title}>Some audio books from YouTube</h1>
         {authors.map((author) => (
           <Link key={author.id} href={"books/" + author.id}>
             <a className={styles.single}>
