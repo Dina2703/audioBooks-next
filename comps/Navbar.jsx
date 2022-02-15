@@ -18,7 +18,9 @@ const Navbar = () => {
         <a className={router.pathname == "/about" ? "active" : ""}>About</a>
       </Link>
       <Link href="/books">
-        <a className={router.pathname == "/books" ? "active" : ""}>Home</a>
+        <a className={router.pathname == "/books" ? "active" : ""}>
+          Audio-books
+        </a>
       </Link>
     </nav>
   );
