@@ -39,7 +39,7 @@ const Books = () => {
     {
       name: "IKIGAI: The Japanese Secret to a Long and Happy Life",
       author: "Francesc Miralles and Hector Garcia",
-      url: "https://www.youtube.com/watch?v=_mpynWHzSvQ",
+      url: "https://www.youtube.com/watch?v=qM4vJjQqk-4",
       id: 5,
     },
   ];
