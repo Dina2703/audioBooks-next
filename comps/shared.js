@@ -1,8 +1,8 @@
 export const authors = [
   {
-    name: "GOOD VIBES GOOD LIFE",
-    author: "Vex King",
-    url: "https://www.youtube.com/watch?v=Bgaok7GF3_g",
+    name: "RICH DAD POOR DAD",
+    author: "Robert Kiyosaki",
+    url: "https://www.youtube.com/watch?v=wp7Lz1svVro",
     id: 1,
   },
   {
