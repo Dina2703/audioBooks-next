@@ -15,4 +15,11 @@
   color: rgb(49, 79, 79);
   padding-bottom: 5px;
   text-align: center;
+  margin-bottom: 0;
+}
+
+.parag {
+  text-align: center;
+  font-style: italic;
+  margin-top: 0;
 }

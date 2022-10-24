@@ -29,4 +29,10 @@ export const authors = [
     url: "https://www.youtube.com/watch?v=_mpynWHzSvQ",
     id: 5,
   },
+  {
+    name: "Do It Today",
+    author: "Darius Foroux",
+    url: "https://www.youtube.com/watch?v=mHrvzVqeMIU&list=LL&index=19&t=4s",
+    id: 6,
+  },
 ];

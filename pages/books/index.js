@@ -25,22 +25,42 @@ const Books = () => {
       id: 2,
     },
     {
+      name: "Thinking, Fast & Slow",
+      author: "Daniel Kahneman",
+      url: "https://www.youtube.com/watch?v=d953fegpMFE",
+      id: 3,
+    },
+    {
+      name: "Do It Today",
+      author: "Darius Foroux",
+      url: "https://www.youtube.com/watch?v=mHrvzVqeMIU&list=LL&index=19&t=4s",
+      id: 6,
+    },
+    {
       name: "EMPOWERING WOMEN",
       author: "Louise Hay",
       url: "https://www.youtube.com/watch?v=RuRsdWXUWcs",
-      id: 3,
+      id: 8,
+    },
+
+    {
+      name: "IKIGAI: The Japanese Secret to a Long and Happy Life",
+      author: "Francesc Miralles and Hector Garcia",
+      url: "https://www.youtube.com/watch?v=qM4vJjQqk-4",
+      id: 5,
+    },
+
+    {
+      name: "The Alchemist",
+      author: " Paulo Coelho",
+      url: "https://www.youtube.com/watch?v=uxOto_WRWdM&list=LL&index=24&t=8394s",
+      id: 7,
     },
     {
       name: "WILL",
       author: "Will Smith",
       url: "https://www.youtube.com/watch?v=_mpynWHzSvQ",
       id: 4,
-    },
-    {
-      name: "IKIGAI: The Japanese Secret to a Long and Happy Life",
-      author: "Francesc Miralles and Hector Garcia",
-      url: "https://www.youtube.com/watch?v=qM4vJjQqk-4",
-      id: 5,
     },
   ];
 
@@ -51,7 +71,10 @@ const Books = () => {
         <meta name="keywords" content="books" />
       </Head>
       <div>
-        <h1 className={styles.title}>Some audio books from YouTube</h1>
+        <h1 className={styles.title}>Recommended self-development books</h1>
+        <p className={styles.parag}>
+          click to listen the audio-book on YouTube
+        </p>
         {authors.map((author) => (
           <Link key={author.id} href={author.url}>
             <a className={styles.single} target="_blank">
